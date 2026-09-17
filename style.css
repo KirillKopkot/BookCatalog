@@ -277,6 +277,46 @@ body {
     overflow: hidden;
 }
 
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    padding: 80px 144px;
+    background: #59a9ea;
+}
+
+.about__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about__row--reverse {
+    flex-direction: row-reverse;
+}
+
+.about__title {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.about__subtitle {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.about__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    background: #59a9ea;
+    border: 4px solid #59a9ea;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
 .site-footer {
     border-top: 1px solid #000000;
     padding: 24px;
