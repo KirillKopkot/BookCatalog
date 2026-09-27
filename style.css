@@ -392,6 +392,39 @@ body {
     overflow: hidden;
 }
 
+.width-demo {
+    padding: 40px 32px;
+    background: #59a9ea;
+}
+
+.width-demo__title {
+    margin: 0 0 24px;
+    font-size: 18px;
+}
+
+.width-demo__box {
+    box-sizing: border-box;
+    margin: 0 0 24px;
+    padding: 16px;
+    border: 2px solid #fbb905;
+    border-radius: 4px;
+    background: #dcf8f8;
+}
+
+.width-demo__box--width {
+    width: 800px;
+}
+
+.width-demo__box--max-width {
+    max-width: 800px;
+}
+
+.width-demo__label {
+    margin: 0 0 8px;
+    font-weight: bold;
+    color: #4e800c;
+}
+
 .site-footer {
     border-top: 1px solid #000000;
     padding: 24px;
