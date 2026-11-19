@@ -2,47 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Catalog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 </head>
 <body>
 
-<header class="header">
-    <a href="index.html" class="header__logo">LOGO</a>
-    <nav class="header__nav">
-        <a href="catalog.html">Catalog</a>
-        <a href="about.html">About Us</a>
-        <a href="collaboration.html">Collaboration</a>
-    </nav>
-    <a href="profile.html" class="header__login">Login/Profile</a>
-</header>
+<nav class="navbar navbar-expand-md fixed-top bg-bk-yellow">
+    <div class="container-fluid px-md-4">
+        <a class="navbar-brand fw-bold" href="index.html">LOGO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav me-md-auto">
+                <li class="nav-item"><a class="nav-link" href="catalog.html">Catalog</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="collaboration.html">Collaboration</a></li>
+                <li class="nav-item"><a class="nav-link" href="js-tasks.html">JS Tasks</a></li>
+            </ul>
+            <a class="nav-link text-nowrap" href="profile.html">Login/Profile</a>
+        </div>
+    </div>
+</nav>
 
-<section class="collaboration">
-    <p class="collaboration__question">
+<main>
+<section class="bg-bk-blue text-center py-5 px-3">
+    <p class="fs-3 text-secondary mb-4">
         Do you write your own BOOK???<br>
         Are you a BOOKS contributor?
     </p>
-    <h2 class="collaboration__title">CONTACT US</h2>
-    <p class="collaboration__email">collaboration.example@mail.com</p>
+    <h2 class="fs-2 mb-3">CONTACT US</h2>
+    <p class="fs-5 mb-0">collaboration.example@mail.com</p>
 </section>
 
-<section class="collaboration-image">
-    <div class="collaboration-image__placeholder">
-        <img src="img/Frutiger%20aero%20wallpaper.jpg" alt="Frutiger Aero Wallpaper">
+<section class="bg-bk-blue pb-4 px-3">
+    <div class="row">
+        <div class="col-12 col-md-9 col-lg-7 mx-auto">
+            <img src="img/Frutiger%20aero%20wallpaper.jpg" alt="Frutiger Aero Wallpaper" class="img-fluid rounded-5 w-100">
+        </div>
     </div>
 </section>
+</main>
 
-
-<footer class="site-footer">
-    <div class="site-footer__logo">LOGO</div>
-    <div class="site-footer__email">books.example@gmail.com</div>
+<footer class="bg-bk-yellow border-top border-dark py-3 px-3 px-md-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+    <div class="fw-bold">LOGO</div>
+    <div class="text-secondary small">books.example@gmail.com</div>
 </footer>
 
-<aside class="author">
-    <p class="author__name">Author: Kirill Kopkot</p>
-    <p class="author__email">books.example@gmail.com</p>
+<aside class="author-plate position-fixed bottom-0 end-0 m-3 px-3 py-2 rounded">
+    <p class="fw-bold mb-0">Author: Kirill Kopkot</p>
+    <p class="text-secondary mb-0">books.example@gmail.com</p>
 </aside>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

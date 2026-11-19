@@ -1,0 +1,121 @@
+/* Стили только этой страницы: раскладка, фон, адаптив.
+   Вид компонентов (кнопки, поля, карточки, записки) берётся из design/bundle.css. */
+
+/* Токены «Бумажного луга» (значения из design/tokens.json) */
+:root {
+    --sky: #2F6F8F;
+    --sky-deep: #245A75;
+    --paper: #EFE6D2;
+    --paper-light: #F8F2E3;
+    --paper-shade: #DCCFB0;
+    --sun: #F2C230;
+    --ink: #1E2A6B;
+    --leaf: #5B7B2F;
+    --leaf-deep: #41591F;
+    --kraft: #C9A66B;
+    --space-4: 24px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background-color: var(--paper-light);
+    background-image: var(--pc-grain);
+    color: var(--ink);
+    font: 500 16px/1.4 var(--pc-body);
+}
+
+/* ---------- шапка ---------- */
+.hero {
+    position: relative;
+    max-width: 1128px;
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-4) 0;
+}
+#hero-scene { min-height: 240px; }
+
+/* display-xl: светлая бумага, обводка ink, поворот и тень на основе ink */
+.hero-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    width: 90%;
+    text-align: center;
+    font: 400 clamp(40px, 9vw, 104px)/1 var(--pc-display);
+    color: var(--paper-light);
+    -webkit-text-stroke: 3px var(--ink);
+    paint-order: stroke fill;
+    text-shadow: 4px 6px 0 var(--ink), 8px 14px 18px rgba(30, 42, 107, .35);
+    transform: translate(-50%, -50%) rotate(-3deg);
+    pointer-events: none; /* заголовок не перехватывает клики */
+}
+
+/* ---------- навигация ---------- */
+.nav-mount { display: flex; justify-content: center; padding: var(--space-4) var(--space-4) 0; }
+.pc-sign { max-width: 100%; }
+
+/* ---------- основная часть: небо-полутон сверху (картинка задаётся из tasks.js) ---------- */
+.meadow {
+    margin-top: var(--space-4);
+    padding: 48px var(--space-4) 24px;
+    background-color: var(--paper);
+    background-image: var(--sky-img, none);
+    background-repeat: no-repeat;
+    background-size: 100% 420px;
+}
+
+.grid {
+    max-width: 1128px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px 40px;
+}
+
+/* 24px воздуха: скотч сверху и значок справа выходят за край карточки */
+.task { position: relative; padding: var(--space-4); }
+.task-host { width: 100%; }
+.task .pc-card-w { width: 100%; }
+.task h2 { margin: 0 0 8px; font: 400 28px/32px var(--pc-display); color: var(--ink); }
+.task p { margin: 0 0 16px; font: 500 15px/22px var(--pc-body); color: var(--ink); }
+
+.task-controls { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; margin-bottom: 8px; }
+.task .pc-field-w { display: block; width: 100%; }
+.task .pc-btn { min-width: 0; }
+
+/* записка с результатом */
+.note-host { display: block; width: 100%; margin-top: 28px; transform: rotate(-1deg); }
+.note-host .pc-note-w { width: 100%; }
+.pc-note .pc-value { display: block; font-size: 40px; line-height: 44px; overflow-wrap: anywhere; }
+.pc-note .pc-msg { overflow-wrap: anywhere; }
+.pc-note.long .pc-value { font-size: 24px; line-height: 30px; }
+
+/* исходный текст в бумажном блоке */
+.quote {
+    display: block;
+    margin: 0 0 20px;
+    padding: 12px 16px;
+    --c: var(--paper);
+    border: 1.5px dashed var(--ink);
+    color: var(--ink);
+    font: 700 15px/22px var(--pc-body);
+}
+.quote span { display: block; }
+
+/* ---------- травяной холм вместо футера ---------- */
+.hill { line-height: 0; overflow: hidden; }
+.hill svg { width: 100%; height: 180px; }
+
+/* ---------- адаптив ---------- */
+@media (max-width: 760px) {
+    .grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+    .hero, .nav-mount, .meadow { padding-left: 16px; padding-right: 16px; }
+    .task { padding: 20px; }
+    .hero-title { -webkit-text-stroke-width: 2px; text-shadow: 3px 4px 0 var(--ink); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .note-host, .hero-title { transition: none; }
+}

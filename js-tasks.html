@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="stylesheet" href="design/bundle.css">
+    <link rel="stylesheet" href="js-tasks.css">
+</head>
+<body>
+
+<main class="meadow" id="meadow">
+    <section class="grid" aria-label="JavaScript tasks">
+
+<article class="task">
+  <span class="pc-deco-host task-host">
+    <span class="pc-lift pc-card-w" style="display:block">
+      <span class="pc-cut pc-sheet pc-card" data-cut="bold" data-seed="41">
+    <span class="pc-card-inlay-w" style="display:block"><span class="pc-card-inlay pc-sheet" data-cut="fine" data-seed="417">
+      <h2>Username</h2>
+      <p>Type a name and show it on the page.</p>
+      <span class="task-controls"><span class="pc-lift pc-field-w"><span class="pc-cut pc-sheet pc-field" data-seed="103"><label for="t1-name">Enter username</label>
+        <span class="pc-input-hole">
+          <input id="t1-name" class="pc-input" data-cut="fine" data-seed="106" type="text" autocomplete="off" placeholder="Asan" value=""></span></span></span>
+        <span class="pc-lift pc-btn-w">
+          <button type="button" class="pc-cut pc-sheet pc-btn" data-seed="145" onclick="runUsername()">Show</button>
+        </span>
+      </span>
+      <span class="pc-deco-host note-host"><span class="pc-lift pc-note-w" style="display:block"><span class="pc-cut pc-sheet pc-note" data-shape="note" data-fold="26" data-seed="148" aria-live="polite"><span class="pc-label" id="t1-label">Result</span><span class="pc-value" id="t1-value">—</span><span class="pc-msg" id="t1-msg" style="display:block">Press the button.</span></span><span class="pc-note-fold"></span></span></span>
+    </span>
+    </span>
+  </span></span>
+  <span class="pc-card-tape"></span>
+    <span class="pc-card-badge"></span>
+  </span>
+</article>
+<article class="task">
+  <span class="pc-deco-host task-host"><span class="pc-lift pc-card-w" style="display:block"><span class="pc-cut pc-sheet pc-card" data-cut="bold" data-seed="42">
+    <span class="pc-card-inlay-w" style="display:block"><span class="pc-card-inlay pc-sheet" data-cut="fine" data-seed="427">
+      <h2>Wages</h2>
+      <p>Payment = hours × rate. Rate may use a comma or a dot (2,75).</p>
+      
+      <span class="task-controls"><span class="pc-lift pc-field-w"><span class="pc-cut pc-sheet pc-field" data-seed="109"><label for="t2-hours">Number of hours</label><span class="pc-input-hole"><input id="t2-hours" class="pc-input" data-cut="fine" data-seed="112" type="text" autocomplete="off" placeholder="35" value=""></span></span></span><span class="pc-lift pc-field-w"><span class="pc-cut pc-sheet pc-field" data-seed="115"><label for="t2-rate">Enter rate</label><span class="pc-input-hole"><input id="t2-rate" class="pc-input" data-cut="fine" data-seed="118" type="text" autocomplete="off" placeholder="2,75" value=""></span></span></span><span class="pc-lift pc-btn-w"><button type="button" class="pc-cut pc-sheet pc-btn" data-seed="151" onclick="runWages()">Calculate</button></span></span>
+      <span class="pc-deco-host note-host"><span class="pc-lift pc-note-w" style="display:block"><span class="pc-cut pc-sheet pc-note" data-shape="note" data-fold="26" data-seed="154" aria-live="polite"><span class="pc-label" id="t2-label">Result</span><span class="pc-value" id="t2-value">—</span><span class="pc-msg" id="t2-msg" style="display:block">Press the button.</span></span><span class="pc-note-fold"></span></span></span>
+    </span></span>
+  </span></span>
+  <span class="pc-card-tape"></span><span class="pc-card-badge"></span></span>
+</article>
+<article class="task">
+  <span class="pc-deco-host task-host"><span class="pc-lift pc-card-w" style="display:block"><span class="pc-cut pc-sheet pc-card" data-cut="bold" data-seed="43">
+    <span class="pc-card-inlay-w" style="display:block"><span class="pc-card-inlay pc-sheet" data-cut="fine" data-seed="437">
+      <h2>Celsius to Fahrenheit</h2>
+      <p>F = C × 9 / 5 + 32. Negative values and 0 work too.</p>
+      
+      <span class="task-controls"><span class="pc-lift pc-field-w"><span class="pc-cut pc-sheet pc-field" data-seed="121"><label for="t3-celsius">Celsius</label><span class="pc-input-hole"><input id="t3-celsius" class="pc-input" data-cut="fine" data-seed="124" type="text" autocomplete="off" placeholder="-40" value=""></span></span></span><span class="pc-lift pc-btn-w"><button type="button" class="pc-cut pc-sheet pc-btn" data-seed="157" onclick="runCelsius()">Convert</button></span></span>
+      <span class="pc-deco-host note-host"><span class="pc-lift pc-note-w" style="display:block"><span class="pc-cut pc-sheet pc-note" data-shape="note" data-fold="26" data-seed="160" aria-live="polite"><span class="pc-label" id="t3-label">Result</span><span class="pc-value" id="t3-value">—</span><span class="pc-msg" id="t3-msg" style="display:block">Press the button.</span></span><span class="pc-note-fold"></span></span></span>
+    </span></span>
+  </span></span>
+  <span class="pc-card-tape"></span><span class="pc-card-badge"></span></span>
+</article>
+<article class="task">
+  <span class="pc-deco-host task-host"><span class="pc-lift pc-card-w" style="display:block"><span class="pc-cut pc-sheet pc-card" data-cut="bold" data-seed="44">
+    <span class="pc-card-inlay-w" style="display:block"><span class="pc-card-inlay pc-sheet" data-cut="fine" data-seed="447">
+      <h2>Wages with overtime</h2>
+      <p>Up to 40 h: normal rate. 40–60 h: ×1.5 for extra hours. Over 60 h: ×2 for hours above 60.</p>
+      
+      <span class="task-controls">
+        <span class="pc-lift pc-field-w"><span class="pc-cut pc-sheet pc-field" data-seed="127">
+        <label for="t4-hours">Number of hours</label>
+        <span class="pc-input-hole"><input id="t4-hours" class="pc-input" data-cut="fine" data-seed="130" type="text" autocomplete="off" placeholder="45" value="">
+        </span>
+      </span>\
+      </span>
+        <span class="pc-lift pc-field-w">
+          <span class="pc-cut pc-sheet pc-field" data-seed="133">
+        <label for="t4-rate">Enter rate</label>
+        <span class="pc-input-hole"><input id="t4-rate" class="pc-input" data-cut="fine" data-seed="136" type="text" autocomplete="off" placeholder="10" value=""></span></span></span><span class="pc-lift pc-btn-w">
+        <button type="button" class="pc-cut pc-sheet pc-btn" data-seed="163" onclick="runOvertime()">Calculate</button>
+      </span>
+      </span>
+      <span class="pc-deco-host note-host"><span class="pc-lift pc-note-w" style="display:block"><span class="pc-cut pc-sheet pc-note" data-shape="note" data-fold="26" data-seed="166" aria-live="polite"><span class="pc-label" id="t4-label">Result</span><span class="pc-value" id="t4-value">—</span><span class="pc-msg" id="t4-msg" style="display:block">Press the button.</span></span><span class="pc-note-fold"></span></span></span>
+    </span></span>
+  </span></span>
+  <span class="pc-card-tape"></span><span class="pc-card-badge"></span></span>
+</article>
+<article class="task">
+  <span class="pc-deco-host task-host"><span class="pc-lift pc-card-w" style="display:block"><span class="pc-cut pc-sheet pc-card" data-cut="bold" data-seed="45">
+    <span class="pc-card-inlay-w" style="display:block"><span class="pc-card-inlay pc-sheet" data-cut="fine" data-seed="457">
+      <h2>Sum of odd numbers</h2>
+      <p>Adds all odd numbers from 1 to 100 using a while loop.</p>
+      
+      <span class="task-controls"><span class="pc-lift pc-btn-w"><button type="button" class="pc-cut pc-sheet pc-btn" data-seed="169" onclick="runOdd()">Calculate</button></span></span>
+      <span class="pc-deco-host note-host"><span class="pc-lift pc-note-w" style="display:block"><span class="pc-cut pc-sheet pc-note" data-shape="note" data-fold="26" data-seed="172" aria-live="polite"><span class="pc-label" id="t5-label">Result</span><span class="pc-value" id="t5-value">—</span><span class="pc-msg" id="t5-msg" style="display:block">Press the button.</span></span><span class="pc-note-fold"></span></span></span>
+    </span></span>
+  </span></span>
+  <span class="pc-card-tape"></span><span class="pc-card-badge"></span></span>
+</article>
+<article class="task">
+  <span class="pc-deco-host task-host"><span class="pc-lift pc-card-w" style="display:block"><span class="pc-cut pc-sheet pc-card" data-cut="bold" data-seed="46">
+    <span class="pc-card-inlay-w" style="display:block"><span class="pc-card-inlay pc-sheet" data-cut="fine" data-seed="467">
+      <h2>Sum of even numbers</h2>
+      <p>Adds all even numbers from 1 to 100 using a for loop.</p>
+      
+      <span class="task-controls"><span class="pc-lift pc-btn-w"><button type="button" class="pc-cut pc-sheet pc-btn" data-seed="175" onclick="runEven()">Calculate</button></span></span>
+      <span class="pc-deco-host note-host"><span class="pc-lift pc-note-w" style="display:block"><span class="pc-cut pc-sheet pc-note" data-shape="note" data-fold="26" data-seed="178" aria-live="polite"><span class="pc-label" id="t6-label">Result</span><span class="pc-value" id="t6-value">—</span><span class="pc-msg" id="t6-msg" style="display:block">Press the button.</span></span><span class="pc-note-fold"></span></span></span>
+    </span></span>
+  </span></span>
+  <span class="pc-card-tape"></span><span class="pc-card-badge"></span></span>
+</article>
+<article class="task">
+  <span class="pc-deco-host task-host"><span class="pc-lift pc-card-w" style="display:block"><span class="pc-cut pc-sheet pc-card" data-cut="bold" data-seed="47">
+    <span class="pc-card-inlay-w" style="display:block"><span class="pc-card-inlay pc-sheet" data-cut="fine" data-seed="477">
+      <h2>Array statistics</h2>
+      <p>Numbers separated by commas or spaces. Finds max, min and average with a loop and shows them in an alert.</p>
+      
+      <span class="task-controls"><span class="pc-lift pc-field-w"><span class="pc-cut pc-sheet pc-field" data-seed="139"><label for="t7-array">Numbers</label><span class="pc-input-hole"><input id="t7-array" class="pc-input" data-cut="fine" data-seed="142" type="text" autocomplete="off" placeholder="4, 8, 15, 16, 23, 42" value="4, 8, 15, 16, 23, 42"></span></span></span><span class="pc-lift pc-btn-w"><button type="button" class="pc-cut pc-sheet pc-btn" data-seed="181" onclick="runArray()">Analyze</button></span></span>
+      <span class="pc-deco-host note-host"><span class="pc-lift pc-note-w" style="display:block"><span class="pc-cut pc-sheet pc-note" data-shape="note" data-fold="26" data-seed="184" aria-live="polite"><span class="pc-label" id="t7-label">Result</span><span class="pc-value" id="t7-value">—</span><span class="pc-msg" id="t7-msg" style="display:block">Press the button.</span></span><span class="pc-note-fold"></span></span></span>
+    </span></span>
+  </span></span>
+  <span class="pc-card-tape"></span><span class="pc-card-badge"></span></span>
+</article>
+<article class="task">
+  <span class="pc-deco-host task-host"><span class="pc-lift pc-card-w" style="display:block"><span class="pc-cut pc-sheet pc-card" data-cut="bold" data-seed="48">
+    <span class="pc-card-inlay-w" style="display:block"><span class="pc-card-inlay pc-sheet" data-cut="fine" data-seed="487">
+      <h2>Unique words</h2>
+      <p>Collects every different word from the text below and sorts them A–Z.</p>
+      <span class="quote pc-sheet" aria-label="Shakespeare text"><span>But soft what light through yonder window breaks</span><span>It is the east and Juliet is the sun</span><span>Arise fair sun and kill the envious moon</span><span>Who is already sick and pale with grief</span></span>
+      <span class="task-controls"><span class="pc-lift pc-btn-w"><button type="button" class="pc-cut pc-sheet pc-btn" data-seed="187" onclick="runShakespeare()">Find unique words</button></span></span>
+      <span class="pc-deco-host note-host"><span class="pc-lift pc-note-w" style="display:block"><span class="pc-cut pc-sheet pc-note long" data-shape="note" data-fold="26" data-seed="190" aria-live="polite"><span class="pc-label" id="t8-label">Result</span><span class="pc-value" id="t8-value">—</span><span class="pc-msg" id="t8-msg" style="display:block">Press the button.</span></span><span class="pc-note-fold"></span></span></span>
+    </span></span>
+  </span></span>
+  <span class="pc-card-tape"></span><span class="pc-card-badge"></span></span>
+</article>
+    </section>
+</main>
+
+<script src="tasks.js"></script>
+</body>
+</html>
